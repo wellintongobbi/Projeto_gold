@@ -276,3 +276,155 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+.contato {
+  text-align: center;
+}
+
+.contato-desc {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.contato-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contato-item {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  min-width: 220px;
+}
+
+.contato-item h3 {
+  margin-bottom: 10px;
+}
+
+.contato-item a {
+  display: block;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.contato-item a:hover {
+  color: #25D366;
+}
+.contato-item a:hover {
+  color: #25D366;
+}
+
+/* Instagram com cor diferenciada */
+.contato-item a[href*="instagram"]:hover {
+  color: #E1306C;
+}
+.insta-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.insta-link img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.insta-link:hover {
+  color: #E1306C;
+}
+
+.insta-link:hover img {
+  transform: scale(1.2);
+}
+
+/* ===== SERVIÇOS UPGRADE ===== */
+
+.servicos-desc {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 1 1 260px;
+  max-width: 280px;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.card img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Efeito hover (o charme 👇) */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card:hover img {
+  transform: scale(1.15);
+}
+
+#servicos h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+#servicos {
+  text-align: center;
+}

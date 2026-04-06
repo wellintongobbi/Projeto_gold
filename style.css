@@ -157,7 +157,7 @@ footer {
     display: block;
     z-index: 1100;
   }
-
+  
   nav {
     width: 100%;
   }
@@ -456,7 +456,7 @@ footer {
 
 .sobre-box p {
   text-align: justify;
-  text-justify: inter-word;
+  line-height: 1.7;
 }
 
 .portfolio {
@@ -604,4 +604,17 @@ footer {
   padding: 5px 10px;
   cursor: pointer;
   z-index: 3;
+}
+@media (max-width: 768px) {
+.sobre-box {
+    padding: 40px 25px;
+  }
+  .sobre-box p {
+    text-align: left;
+    text-justify: auto; /* 👈 IMPORTANTE */
+    line-height: 1.6;
+    font-size: 0.95rem;
+    letter-spacing: normal;
+    word-spacing: normal; /* 👈 mata os espaços gigantes */
+  }
 }

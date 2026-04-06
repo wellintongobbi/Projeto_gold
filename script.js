@@ -160,6 +160,18 @@ const imagens = {
     "images/box3.jpg",
     "images/box4.jpg",
     "images/box5.jpg"
+  ],
+   mozart: [
+    "images/mozart.jpeg",
+    "images/mozart2.jpeg"
+  ],
+  amadeus: [
+    "images/amadeus.jpeg",
+    "images/amadeus2.jpeg",
+    "images/amadeus3.jpeg",
+    "images/amadeus4.jpeg",
+    "images/amadeus5.jpeg",
+    "images/amadeus6.jpeg"
   ]
 };
 

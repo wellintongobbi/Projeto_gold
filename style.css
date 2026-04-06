@@ -147,7 +147,7 @@ footer {
   padding: 20px;
   background: #111;
   color: white;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 /* MOBILE */
@@ -249,7 +249,7 @@ footer {
 /* SOBRE */
 .image_bg {
   position: relative;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background: url("images/frente_loja3.webp") center/cover no-repeat;
   display: flex;
@@ -258,9 +258,9 @@ footer {
 }
 
 .sobre-box {
-  width: 30%;
+  width: 40%;
   min-width: 300px;
-  padding: 180px 40px;
+  padding: 80px 40px;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -384,29 +384,42 @@ footer {
   flex: 1 1 260px;
   max-width: 280px;
   background: white;
-  padding: 25px 20px;
+  padding: 0;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: white;
 }
 
 .card img {
-  width: 70px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
-
+.card h3,
+.card p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+}
 .card h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
+  bottom: 40px;
 }
 
 .card p {
-  font-size: 0.95rem;
-  color: #555;
+  bottom: 10px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
 }
 
 /* Efeito hover (o charme 👇) */
@@ -427,4 +440,168 @@ footer {
 
 #servicos {
   text-align: center;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+  );
+  z-index: 1;
+}
+
+.sobre-box p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.portfolio {
+  padding: 100px 0;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ITEM */
+.portfolio-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* IMAGEM */
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* OVERLAY (vidro) */
+.portfolio-item .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* TEXTO */
+.overlay h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* HOVER */
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.slider.hidden {
+  display: none;
+}
+
+.slider-track {
+  position: relative;
+  height: 400px; /* padrão (mobile first) */
+}
+
+/* 💻 TELAS MAIORES */
+@media (min-width: 768px) {
+  .slider-track {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-track {
+    height: 650px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slider-track {
+    height: 750px;
+  }
+}
+
+.slider-track img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* destaque na imagem ativa */
+.slider-track img.active {
+  opacity: 1;
+}
+
+/* botões */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 6px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.close-slider {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 3;
 }

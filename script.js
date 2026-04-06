@@ -60,7 +60,7 @@ console.log("rodando");
   }
 
   /* =======================
-     SMOOTH SCROLL TOP 🔥
+     SMOOTH SCROLL TOP 
   ======================== */
   const links = document.querySelectorAll('a[href^="#"]');
 
@@ -95,7 +95,7 @@ console.log("rodando");
   });
 
   /* =======================
-   SMOOTH SCROLL GLOBAL 🔥
+   SMOOTH SCROLL GLOBAL 
   ======================= */
   const lenis = new Lenis({
     lerp: 0.1, // mais suave
@@ -109,4 +109,147 @@ console.log("rodando");
 
   requestAnimationFrame(raf)
 
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  // ... SEU CÓDIGO EXISTENTE ...
+
+  /* =======================
+     PORTFOLIO SLIDER 
+  ======================= */
+
+  const slider = document.getElementById("portfolio-slider");
+  const track = document.getElementById("slider-track");
+  const items = document.querySelectorAll(".portfolio-item");
+  const closeBtn = document.querySelector(".close-slider");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  let currentIndex = 0;
+  let autoSlide;
+
+const imagens = {
+  porta: [
+    "images/porta.jpeg",
+    "images/porta2.jpeg",
+    "images/porta3.jpeg",
+    "images/porta4.jpeg",
+    "images/porta5.jpg"
+  ],
+
+  janela: [
+    "images/janela.jpeg",
+    "images/janela2.jpg",
+    "images/janela3.jpg",
+    "images/janela4.jpg",
+    "images/janela5.jpg"
+  ],
+
+  instalacao: [
+    "images/inside.jpg",
+    "images/inside2.jpeg",
+    "images/inside3.jpeg",
+    "images/inside4.jpeg",
+    "images/inside5.jpeg"
+  ],
+
+  box: [
+    "images/box.jpeg",
+    "images/box2.jpeg",
+    "images/box3.jpg",
+    "images/box4.jpg",
+    "images/box5.jpg"
+  ]
+};
+
+  function updateSlider() {
+  const images = track.querySelectorAll("img");
+
+  images.forEach(img => img.classList.remove("active"));
+
+  if (images[currentIndex]) {
+    images[currentIndex].classList.add("active");
+  }
+}
+
+  function startAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+      const total = track.children.length;
+      currentIndex = (currentIndex + 1) % total;
+      updateSlider();
+    }, 3000);
+  }
+
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      const categoria = item.dataset.category;
+
+      track.innerHTML = "";
+      currentIndex = 0;
+
+      imagens[categoria].forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        track.appendChild(img);
+      });
+
+      slider.classList.remove("hidden");
+      slider.scrollIntoView({ behavior: "smooth" });
+
+      updateSlider();
+      startAutoSlide();
+    });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const total = track.children.length;
+    currentIndex = (currentIndex + 1) % total;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const total = track.children.length;
+    currentIndex = (currentIndex - 1 + total) % total;
+    updateSlider();
+  });
+
+  closeBtn.addEventListener("click", () => {
+    slider.classList.add("hidden");
+    clearInterval(autoSlide);
+  });
+
+
+
+/* =======================
+   ABRIR SLIDER AUTOMÁTICO
+======================= */
+
+const params = new URLSearchParams(window.location.search);
+const categoriaURL = params.get("categoria");
+
+if (categoriaURL && imagens[categoriaURL]) {
+
+  track.innerHTML = "";
+  currentIndex = 0;
+
+  imagens[categoriaURL].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    track.appendChild(img);
+  });
+
+  slider.classList.remove("hidden");
+
+  updateSlider();
+  startAutoSlide();
+
+  setTimeout(() => {
+    slider.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }, 200);
+}
 });

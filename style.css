@@ -611,10 +611,18 @@ footer {
   }
   .sobre-box p {
     text-align: left;
-    text-justify: auto; /* 👈 IMPORTANTE */
+    text-justify: auto; 
     line-height: 1.6;
     font-size: 0.95rem;
     letter-spacing: normal;
-    word-spacing: normal; /* 👈 mata os espaços gigantes */
+    word-spacing: normal; 
+  }
+  .portfolio-item .overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .overlay h3 {
+    font-size: 1.1rem;
   }
 }

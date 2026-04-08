@@ -172,6 +172,14 @@ const imagens = {
     "images/amadeus4.jpeg",
     "images/amadeus5.jpeg",
     "images/amadeus6.jpeg"
+  ],
+  obras: [
+    "images/obras.jpeg",
+    "images/obras2.jpeg",
+    "images/obras3.jpeg",
+    "images/obras4.jpeg",
+    "images/obras5.jpeg",
+    "images/obras6.jpeg"
   ]
 };
 

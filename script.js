@@ -135,15 +135,18 @@ const imagens = {
     "images/porta2.jpeg",
     "images/porta3.jpeg",
     "images/porta4.jpeg",
-    "images/porta5.jpg"
+    "images/porta5.jpg",
+    "images/porta6.jpeg",
+    "images/porta7.jpeg",
+    "images/porta8.jpeg"
   ],
 
   janela: [
-    "images/janela.jpeg",
+    "images/janela.jpg",
     "images/janela2.jpg",
     "images/janela3.jpg",
     "images/janela4.jpg",
-    "images/janela5.jpg"
+
   ],
 
   instalacao: [

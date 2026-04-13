@@ -138,7 +138,24 @@ const imagens = {
     "images/porta5.jpg",
     "images/porta6.jpeg",
     "images/porta7.jpeg",
-    "images/porta8.jpeg"
+    "images/porta8.jpeg",
+    "images/porta9.jpeg",
+    "images/porta10.jpeg",
+    "images/porta11.jpeg",
+    "images/porta12.jpeg",
+    "images/porta13.jpeg",
+    "images/porta14.jpeg",
+    "images/porta15.jpeg",
+    "images/porta16.jpeg",
+    "images/porta17.jpeg",
+    "images/porta18.jpeg",
+    "images/porta19.jpeg",
+    "images/porta20.jpeg",
+    "images/porta21.jpeg",
+    "images/porta22.jpeg",
+    "images/porta23.jpeg",
+    "images/porta24.jpeg",
+    "images/porta25.jpeg",
   ],
 
   janela: [
@@ -146,15 +163,15 @@ const imagens = {
     "images/janela2.jpg",
     "images/janela3.jpg",
     "images/janela4.jpg",
-
-  ],
-
-  instalacao: [
-    "images/inside.jpg",
-    "images/inside2.jpeg",
-    "images/inside3.jpeg",
-    "images/inside4.jpeg",
-    "images/inside5.jpeg"
+    "images/janela5.jpeg",
+    "images/janela6.jpeg",
+    "images/janela7.jpeg",
+    "images/janela9.jpeg",
+    "images/janela10.jpeg",
+    "images/janela11.jpeg",
+    "images/janela12.jpeg",
+    "images/janela13.jpeg",
+    "images/janela14.jpeg"
   ],
 
   box: [
@@ -164,25 +181,27 @@ const imagens = {
     "images/box4.jpg",
     "images/box5.jpg"
   ],
-   mozart: [
-    "images/mozart.jpeg",
-    "images/mozart2.jpeg"
-  ],
-  amadeus: [
-    "images/amadeus.jpeg",
-    "images/amadeus2.jpeg",
-    "images/amadeus3.jpeg",
-    "images/amadeus4.jpeg",
-    "images/amadeus5.jpeg",
-    "images/amadeus6.jpeg"
-  ],
+  
   obras: [
     "images/obras.jpeg",
     "images/obras2.jpeg",
     "images/obras3.jpeg",
     "images/obras4.jpeg",
     "images/obras5.jpeg",
-    "images/obras6.jpeg"
+    "images/obras6.jpeg",
+    "images/amadeus.jpeg",
+    "images/amadeus2.jpeg",
+    "images/amadeus3.jpeg",
+    "images/amadeus4.jpeg",
+    "images/amadeus5.jpeg",
+    "images/amadeus6.jpeg",
+    "images/mozart.jpeg",
+    "images/mozart2.jpeg",
+    "images/inside.jpg",
+    "images/inside2.jpeg",
+    "images/inside3.jpeg",
+    "images/inside4.jpeg",
+    "images/inside5.jpeg"
   ]
 };
 
